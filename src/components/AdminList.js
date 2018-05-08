@@ -5,6 +5,14 @@ import AddUserForm from './AddUserForm';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class AdminList extends React.Component {
+  static propTypes = {
+    user: PropTypes.shape({
+      first: PropTypes.string,
+      last: PropTypes.string,
+      email: PropTypes.string,
+    })
+  };
+
   render(){
     return (
       <div className="directory-list directory-list--admin">

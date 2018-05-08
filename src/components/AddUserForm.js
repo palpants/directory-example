@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class AddUserForm extends React.Component {
-/*
-  firstRef = React.createRef();
-  lastRef = React.createRef();
-  emailRef = React.createRef();
-*/
   static propTypes = {
     addUser: PropTypes.func
   };
@@ -20,8 +15,7 @@ class AddUserForm extends React.Component {
       email: this.emailRef.value
     }
     const key = `user${Date.now()}`;
-    console.log(user);
-    console.log(key);
+
     this.props.addUser(key, user);
 
     event.currentTarget.reset();

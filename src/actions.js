@@ -3,7 +3,6 @@ export const UPDATE_USER = 'UPDATE_USER';
 export const DELETE_USER = 'DELETE_USER';
 
 export function addUser(key, user) {
-  console.log(user)
   return {
     type: ADD_USER,
     key: key,
