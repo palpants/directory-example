@@ -1,12 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from './modules';
+import rootReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
-export const history = createHistory();
 
 const initialState = {
   users: {
-    user-0: {
+    user0: {
       first: "Bruce",
       last: "Lee",
       email: "blee@company.com"

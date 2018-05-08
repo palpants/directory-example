@@ -1,14 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux'
+import {
+  addUser,
+  updateUser,
+  deleteUser
+} from '../actions';
+import AdminList from './AdminList';
 
-class AdminDirectory extends React.Component {
-  render(){
-    return (
-      <div className="directory-list directory-list--admin">
-        <h1 className="directory-list__title">Admin Directory</h1>
-      </div>
-    )
-  }
-};
+const mapStateToProps = state => ({
+  users: state.users
+})
 
-export default AdminDirectory;
+const mapDispatchToProps = dispatch => ({
+  addUser: (key, user) => dispatch(addUser(key, user)),
+  updateUser: (key, user) => dispatch(updateUser(key, user)),
+  deleteUser: key => dispatch(deleteUser(key))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AdminList);

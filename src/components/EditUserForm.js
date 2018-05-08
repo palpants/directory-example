@@ -9,7 +9,8 @@ class EditUserForm extends React.Component {
       email: PropTypes.string,
     }),
     index: PropTypes.string,
-    updateUser: PropTypes.func
+    updateUser: PropTypes.func,
+    deleteUser: PropTypes.func
   };
 
   handleChange = event => {
@@ -22,14 +23,15 @@ class EditUserForm extends React.Component {
 
   render() {
     return (
-      <form ref={(input) => this.userForm = input} className="user-edit" onSubmit={this.createUser}>
-        <input name="first" ref={this.firstRef} type="text" placeholder="First Name" />
-        <input name="last" ref={this.lastRef} type="text" placeholder="Last Name" />
-        <input name="email" ref={this.emailRef} type="text" placeholder="Email Address" />
-        <button type="submit">Add User</button>
-      </form>
+      <div ref={(input) => this.userForm = input} className="user-edit">
+        <input className="user-edit__input" name="first" type="text" onChange={this.handleChange} value={this.props.user.first} />
+        <input className="user-edit__input" name="last" type="text" onChange={this.handleChange} value={this.props.user.last} />
+        <input className="user-edit__input" name="email" type="text" onChange={this.handleChange} value={this.props.user.email} />
+        <button className="user-edit__submit button button--bad _icon-cancel" onClick={() => this.props.deleteUser(this.props.index)}>
+        </button>
+      </div>
     )
   }
 }
 
-export default AddUserForm;
+export default EditUserForm;

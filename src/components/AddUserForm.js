@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class AddUserForm extends React.Component {
+/*
   firstRef = React.createRef();
   lastRef = React.createRef();
   emailRef = React.createRef();
-
+*/
   static propTypes = {
     addUser: PropTypes.func
   };
@@ -14,22 +15,25 @@ class AddUserForm extends React.Component {
     event.preventDefault();
 
     const user = {
-      first: this.firstRef.value.value,
-      last: this.lastRef.value.value,
-      email: this.emailRef.value.value
+      first: this.firstRef.value,
+      last: this.lastRef.value,
+      email: this.emailRef.value
     }
-    this.props.addUser(user);
+    const key = `user${Date.now()}`;
+    console.log(user);
+    console.log(key);
+    this.props.addUser(key, user);
 
     event.currentTarget.reset();
   }
 
   render() {
     return (
-      <form ref={(input) => this.userForm = input} className="user-edit" onSubmit={this.createUser}>
-        <input name="first" ref={this.firstRef} type="text" placeholder="First Name" />
-        <input name="last" ref={this.lastRef} type="text" placeholder="Last Name" />
-        <input name="email" ref={this.emailRef} type="text" placeholder="Email Address" />
-        <button type="submit">Add User</button>
+      <form className="user-edit user-edit--add-user" onSubmit={this.createUser}>
+        <input className="user-edit__input" name="first" ref={input => this.firstRef = input} type="text" placeholder="First Name" />
+        <input className="user-edit__input" name="last" ref={input => this.lastRef = input} type="text" placeholder="Last Name" />
+        <input className="user-edit__input" name="email" ref={input => this.emailRef = input} type="text" placeholder="Email Address" />
+        <button className="user-edit__submit button button--good _icon-plus" type="submit"></button>
       </form>
     )
   }
