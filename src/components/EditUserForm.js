@@ -23,7 +23,7 @@ class EditUserForm extends React.Component {
 
   render() {
     return (
-      <div ref={(input) => this.userForm = input} className="user-edit">
+      <div className="user-edit">
         <input className="user-edit__input" name="first" type="text" onChange={this.handleChange} value={this.props.user.first} />
         <input className="user-edit__input" name="last" type="text" onChange={this.handleChange} value={this.props.user.last} />
         <input className="user-edit__input" name="email" type="text" onChange={this.handleChange} value={this.props.user.email} />
