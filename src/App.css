@@ -13,121 +13,6 @@ select,
 button {
   font-family: 'ibm-plex-sans', sans-serif; }
 
-.directory-app {
-  height: 100vh; }
-
-.header {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #555;
-  color: #fff; }
-
-.header__title {
-  text-align: center; }
-
-.page-content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline; }
-
-.page-content__column {
-  width: 100%; }
-
-.page-content__column:first-child {
-  border-bottom: 2px solid #444; }
-
-@media (min-width: 1024px) {
-  .page-content__column {
-    width: 50%;
-    height: calc(100vh - 100px);
-    overflow-y: scroll; }
-  .page-content__column:first-child {
-    border-right: 2px solid #444;
-    border-bottom: 0; } }
-
-.directory-list {
-  color: #444; }
-
-.directory-list__title {
-  text-align: center; }
-
-.button {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  background-color: #00AAB5;
-  opacity: 1;
-  transition: opacity 0.3s; }
-
-.button:hover {
-  cursor: pointer;
-  opacity: 0.8; }
-
-.button--good {
-  background-color: #8EC709; }
-
-.button--bad {
-  background-color: #F00B42; }
-
-.user-edit {
-  padding-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
-
-.user-edit--add-user {
-  padding-top: 20px;
-  position: relative; }
-
-.user-edit--add-user::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 75%;
-  height: 0;
-  top: 0;
-  border-top: 1px solid #ddd; }
-
-.user-edit__input {
-  margin-left: 10px;
-  padding: 2px 10px;
-  width: calc(30% - 10px); }
-
-.user-edit__input:first-child {
-  margin-left: 0; }
-
-.user-edit__submit {
-  margin-left: 10px;
-  width: calc(10% - 20px); }
-
-.user {
-  padding-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
-
-.user__info {
-  margin-left: 10px;
-  width: calc(75% - 20px); }
-
-.user__mailto {
-  display: block;
-  width: calc(25% - 10px); }
-
-.user__email {
-  width: 100%; }
-
-._bold {
-  font-weight: 700; }
-
 @font-face {
   font-family: 'ibm-plex-sans';
   src: url("fonts/IBMPlexSans-Regular.ttf") format("truetype");
@@ -202,6 +87,9 @@ button {
   content: '\e806'; }
 
 /* '' */
+._bold {
+  font-weight: 700; }
+
 .item {
   overflow: hidden; }
 
@@ -223,3 +111,116 @@ button {
     padding: 0;
     max-height: 0;
     opacity: 0; }
+
+.directory-app {
+  height: 100vh; }
+
+.page-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline; }
+
+.page-content__column {
+  width: 100%; }
+
+.page-content__column:first-child {
+  border-bottom: 2px solid #444; }
+
+@media (min-width: 1024px) {
+  .page-content__column {
+    width: 50%;
+    height: calc(100vh - 100px);
+    overflow-y: scroll; }
+  .page-content__column:first-child {
+    border-right: 2px solid #444;
+    border-bottom: 0; } }
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #555;
+  color: #fff; }
+
+.header__title {
+  text-align: center; }
+
+.button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #00AAB5;
+  opacity: 1;
+  transition: opacity 0.3s; }
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8; }
+
+.button--good {
+  background-color: #8EC709; }
+
+.button--bad {
+  background-color: #F00B42; }
+
+/* Components */
+.directory-list {
+  color: #444; }
+
+.directory-list__title {
+  text-align: center; }
+
+.user-edit {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.user-edit--add-user {
+  padding-top: 20px;
+  position: relative; }
+
+.user-edit--add-user::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 0;
+  top: 0;
+  border-top: 1px solid #ddd; }
+
+.user-edit__input {
+  margin-left: 10px;
+  padding: 2px 10px;
+  width: calc(30% - 10px); }
+
+.user-edit__input:first-child {
+  margin-left: 0; }
+
+.user-edit__submit {
+  margin-left: 10px;
+  width: calc(10% - 20px); }
+
+.user {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.user__info {
+  margin-left: 10px;
+  width: calc(75% - 20px); }
+
+.user__mailto {
+  display: block;
+  width: calc(25% - 10px); }
+
+.user__email {
+  width: 100%; }

@@ -1,0 +1,32 @@
+.directory-app {
+  height: 100vh;
+}
+
+.page-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.page-content__column {
+  width: 100%;
+}
+
+.page-content__column:first-child {
+  border-bottom: 2px solid #444;
+}
+
+@media (min-width: 1024px) {
+  .page-content__column {
+    width: 50%;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+  }
+
+  .page-content__column:first-child {
+    border-right: 2px solid #444;
+    border-bottom: 0;
+  }
+}

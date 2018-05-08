@@ -1,0 +1,22 @@
+.button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #00AAB5;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button--good {
+  background-color: #8EC709;
+}
+
+.button--bad {
+  background-color: #F00B42;
+}

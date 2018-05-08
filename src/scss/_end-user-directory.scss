@@ -1,0 +1,21 @@
+.user {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.user__info {
+  margin-left: 10px;
+  width: calc(75% - 20px);
+}
+
+.user__mailto {
+  display: block;
+  width: calc(25% - 10px);
+}
+
+.user__email {
+  width: 100%;
+}

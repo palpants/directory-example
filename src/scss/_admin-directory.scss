@@ -1,0 +1,37 @@
+.user-edit {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-edit--add-user {
+  padding-top: 20px;
+  position: relative;
+}
+
+.user-edit--add-user::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 0;
+  top: 0;
+  border-top: 1px solid #ddd;
+}
+
+.user-edit__input {
+  margin-left: 10px;
+  padding: 2px 10px;
+  width: calc(30% - 10px);
+}
+
+.user-edit__input:first-child {
+  margin-left: 0;
+}
+
+.user-edit__submit {
+  margin-left: 10px;
+  width: calc(10% - 20px);
+}
