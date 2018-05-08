@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+
+import AdminDirectory from './components/AdminDirectory';
+import EndUserDirectory from './components/EndUserDirectory';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div className="directory-app">
+        <header className="header">
+          <h1 className="header__title">Directory Example App</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="page-content">
+          <div className="page-content__column">
+            <AdminDirectory />
+          </div>
+          <div className="page-content__column">
+            <EndUserDirectory />
+          </div>
+        </div>
       </div>
     );
   }

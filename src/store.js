@@ -7,9 +7,9 @@ export const history = createHistory();
 const initialState = {
   users: {
     user-0: {
-      first: "Test",
-      last: "Testingson",
-      email-address: "test@domain.com"
+      first: "Bruce",
+      last: "Lee",
+      email: "blee@company.com"
     }
   }
 };
