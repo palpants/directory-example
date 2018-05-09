@@ -19,7 +19,7 @@ class EndUserList extends React.Component {
           {Object.keys(this.props.users).map(key => (
             <CSSTransition classNames="item" key={key} timeout={{ enter: 400, exit: 400 }}>
               <div className="user" key={key}>
-                <a className="user__mailto" href="mailto:{this.props.users[key].email}">
+                <a className="user__mailto" href={`mailto:${this.props.users[key].email}`}>
                   <button className="user__email button _icon-mail">Send Email</button>
                 </a>
                 <div className="user__info">
