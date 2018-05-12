@@ -4,11 +4,13 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 class EndUserList extends React.Component {
   static propTypes = {
-    user: PropTypes.shape({
-      first: PropTypes.string,
-      last: PropTypes.string,
-      email: PropTypes.string,
-    })
+    users: PropTypes.objectOf(
+      PropTypes.shape({
+        first: PropTypes.string,
+        last: PropTypes.string,
+        email: PropTypes.string,
+      }).isRequired
+    ).isRequired
   };
 
   render(){
